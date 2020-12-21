@@ -1,0 +1,66 @@
+<div class="row">
+
+    <div class="col-md-12 login-container">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group form-inline">
+          <label for="username">Usuário:</label>
+          <input type="text" class="form-control margin" formControlName="username" id="username" autocomplete="off">
+          <div class="error" *ngIf="loginForm.controls['username'].hasError('required') && loginForm.controls['username'].touched">O campo usuário é obrigatório</div>
+          <label for="pwd">Senha:</label>
+          <input type="password" class="form-control margin" formControlName="password" id="pwd" autocomplete="off">
+          <div class="error" *ngIf="loginForm.controls['password'].hasError('required') && loginForm.controls['password'].touched">O campo senha é obrigatório</div>
+          <button class="btn btn-success margin" [disabled]="loginForm.invalid">Login</button>
+        </div>
+
+        <div *ngIf="invalidLogin" class="error">
+          <div>Credenciais inválidas.</div>
+        </div>
+
+        <div class="login-container margin">
+          <a href="#" class="stretched-link">Esqueci minha senha</a>
+        </div>
+
+      </form>
+    </div>
+
+  <div class="container">
+    
+    <div class="row top">
+
+        <div class="col-md-6">
+          <div class="col-md-10 box">
+            <h1 class="description-title">Produto A</h1>
+            <p class="description"><b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="col-md-10 box">
+            <h1 class="description-title">Produto B</h1>
+            <p class="description"><b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        </div>
+
+    </div>
+
+    <div class="row top">
+
+      <div class="col-md-6">
+        <div class="col-md-10 box">
+          <h1 class="description-title">Produto C</h1>
+          <p class="description"><b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="col-md-10 box">
+          <h1 class="description-title">Produto D</h1>
+          <p class="description"><b>Lorem Ipsum</b> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
